@@ -18,7 +18,7 @@ const BoardStrips: React.FC<Props> = ({ tasks, status }) => {
         width="300px"
         margin="0 1rem 0 0"
         xs={3}
-        style={{ background: "rgb(244, 245, 247)", paddingTop: "1rem" }}
+        style={{ background: "rgb(244, 245, 247)", paddingTop: "1rem", overflow:'hidden', overflowY:'scroll' }}
         item
       >
         {tasks?.map((task: TaskType, index: number) =>{

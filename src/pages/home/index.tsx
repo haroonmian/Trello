@@ -20,10 +20,14 @@ const Home = memo(() => {
   };
 
   return (
-    <Container style={{ padding: "2rem", margin: 0, maxWidth: "50%", display:'flex' }}>
-      {groups.map((group) => (
-        <Group key={group.id} onClick={onGroup} {...group} />
-      ))}
+    <Container
+      style={{ padding: "2rem", margin: 0, maxWidth: "50%", display: "flex" }}
+    >
+      <Grid container>
+        {groups.map((group) => (
+          <Group key={group.id} onClick={onGroup} {...group} />
+        ))}
+      </Grid>
       <Grid container>
         <Grid className="group" onClick={addGroup} item>
           <Card style={{ padding: "1rem", margin: "1rem", height: "120px" }}>

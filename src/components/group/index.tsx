@@ -7,8 +7,7 @@ interface Props extends GroupType {
 }
 
 const Group: React.FC<Props> = ({ ...group }) => (
-    <Grid container>
-        <Grid className="group" onClick={() => group.onClick(group.id)} item>
+        <Grid  xs={12} sm={4} md={2}  onClick={() => group.onClick(group.id)} item>
             <Card style={{ padding: "1rem", margin: "1rem" }}>
                 <Grid container style={{ padding: "0.5rem 0" }}>
                     <h5>{group.name}</h5>
@@ -18,7 +17,6 @@ const Group: React.FC<Props> = ({ ...group }) => (
                 </Grid>
             </Card>
         </Grid>
-    </Grid>
 );
 
 export default Group
